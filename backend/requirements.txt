@@ -1,0 +1,13 @@
+# MarketLens API — Python 3.11+
+#
+# Install:  pip install -r requirements.txt
+# Run:      uvicorn app.main:app --reload --port 8000
+
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.32          # ASGI server (includes orjson, httptools, websockets)
+duckdb>=1.1,<2.0                 # local columnar query engine over the Parquet warehouse
+orjson>=3.10                     # fast JSON serialization for API responses
+
+# Optional, only needed if you want to extend analytics in notebook-style tooling:
+# pandas>=2.2
+# pyarrow>=17

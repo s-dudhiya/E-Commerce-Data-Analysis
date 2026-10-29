@@ -1,0 +1,62 @@
+# Root gitignore for e-com-data
+
+# Datasets, Parquet Warehouse & Dumps (Never commit to Git)
+warehouse/
+warehouse/**
+backend/warehouse/
+backend/warehouse/**
+**/warehouse/**
+**/warehouse
+**/amazon/**
+**/flipkart/**
+amazon/
+amazon/**
+flipkart/
+flipkart/**
+amazon-data/
+flipkart-data/
+*.parquet
+*.csv
+*.tsv
+*.jsonl
+*.gz
+*.tar
+*.zip
+*.duckdb
+*.duckdb.tmp*
+*.duckdb.wal
+marketlens-duckdb-tmp/
+
+# Python / Backend
+backend/__pycache__/
+backend/*/__pycache__/
+backend/**/__pycache__/
+*.py[cod]
+backend/.venv/
+backend/venv/
+.venv/
+venv/
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.output/
+frontend/.nitro/
+frontend/.tanstack/
+node_modules/
+dist/
+
+# Environment files & secrets
+.env
+.env.*
+*.env
+*.local
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*.log

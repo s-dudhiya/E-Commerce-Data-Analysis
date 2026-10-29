@@ -1,0 +1,170 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * MarketLens design system — precision analyst workspace.
+ *
+ * Clean, flat surfaces. No gradients, no glassmorphism.
+ * Deep slate charcoal + white cards + indigo accent.
+ */
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-amazon: var(--amazon);
+  --color-flipkart: var(--flipkart);
+  --color-sage: var(--sage);
+  --color-amber: var(--amber);
+  --color-negative: var(--negative);
+  --color-surface: var(--card);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.965 0.003 264);          /* #F1F5F9 cool slate wash */
+  --foreground: oklch(0.185 0.020 265);           /* #0F172A deep ink */
+  --card: oklch(1.000 0.000 0);                   /* #FFFFFF pure white */
+  --card-foreground: oklch(0.185 0.020 265);
+  --popover: oklch(1.000 0.000 0);
+  --popover-foreground: oklch(0.185 0.020 265);
+  --primary: oklch(0.440 0.170 275);              /* #4338CA Royal Iris */
+  --primary-foreground: oklch(1.000 0.000 0);
+  --secondary: oklch(0.965 0.003 264);
+  --secondary-foreground: oklch(0.240 0.020 265);
+  --muted: oklch(0.960 0.005 264);
+  --muted-foreground: oklch(0.450 0.018 260);     /* #64748B clean slate */
+  --accent: oklch(0.955 0.030 275);
+  --accent-foreground: oklch(0.400 0.160 275);
+  --destructive: oklch(0.520 0.200 15);
+  --destructive-foreground: oklch(1.000 0.000 0);
+  --border: oklch(0.920 0.005 264);               /* #E2E8F0 subtle edge */
+  --input: oklch(0.920 0.005 264);
+  --ring: oklch(0.440 0.170 275);
+  --chart-1: oklch(0.440 0.170 275);
+  --chart-2: oklch(0.530 0.210 295);
+  --chart-3: oklch(0.580 0.160 230);
+  --chart-4: oklch(0.500 0.020 260);
+  --chart-5: oklch(0.520 0.190 280);
+  --amazon: oklch(0.250 0.025 265);
+  --flipkart: oklch(0.440 0.170 275);
+  --sage: oklch(0.955 0.035 275);
+  --amber: oklch(0.530 0.210 295);
+  --negative: oklch(0.520 0.200 15);
+  --sidebar: oklch(1.000 0.000 0);
+  --sidebar-foreground: oklch(0.185 0.020 265);
+  --sidebar-border: oklch(0.920 0.005 264);
+}
+
+.dark {
+  --background: oklch(0.130 0.015 265);
+  --foreground: oklch(0.970 0.005 260);
+  --card: oklch(0.180 0.015 265);
+  --card-foreground: oklch(0.970 0.005 260);
+  --popover: oklch(0.180 0.015 265);
+  --popover-foreground: oklch(0.970 0.005 260);
+  --primary: oklch(0.700 0.160 275);
+  --primary-foreground: oklch(0.130 0.015 265);
+  --secondary: oklch(0.220 0.015 265);
+  --secondary-foreground: oklch(0.970 0.005 260);
+  --muted: oklch(0.220 0.015 265);
+  --muted-foreground: oklch(0.700 0.010 260);
+  --accent: oklch(0.250 0.050 275);
+  --accent-foreground: oklch(0.970 0.005 260);
+  --destructive: oklch(0.600 0.190 15);
+  --destructive-foreground: oklch(1.000 0.000 0);
+  --border: oklch(0.260 0.015 265);
+  --input: oklch(0.260 0.015 265);
+  --ring: oklch(0.700 0.160 275);
+  --chart-1: oklch(0.700 0.160 275);
+  --chart-2: oklch(0.720 0.180 295);
+  --chart-3: oklch(0.720 0.150 230);
+  --chart-4: oklch(0.700 0.015 260);
+  --chart-5: oklch(0.680 0.170 280);
+  --amazon: oklch(0.350 0.025 265);
+  --flipkart: oklch(0.700 0.160 275);
+  --sage: oklch(0.280 0.060 275);
+  --amber: oklch(0.720 0.180 295);
+  --negative: oklch(0.600 0.190 15);
+  --sidebar: oklch(0.160 0.015 265);
+  --sidebar-foreground: oklch(0.970 0.005 260);
+  --sidebar-border: oklch(0.260 0.015 265);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv11", "ss01";
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Data-dense surfaces: tabular numerals everywhere. */
+  table {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Refined scrollbar for data panels */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.75 0.005 260);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.60 0.010 260);
+  }
+
+  /* Clean focus ring */
+  :focus-visible {
+    outline: 2px solid oklch(0.440 0.170 275);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+}
